@@ -1,0 +1,23 @@
+#include <iostream> 
+ long gcd( long int a, long int b) 
+{ 
+if (b == 0) 
+	return a; 
+return gcd(b, a % b); 
+} 
+ 
+long lcm(int a, int b) 
+{ 
+	return (a / gcd(a, b)) * b; 
+} 
+
+int main() 
+{ 
+	int a , b,c;
+	printf("input the 1st number : "); 
+	scanf("%d",&a); 
+	printf("input the 2nd number : "); 
+	scanf("%d",&b);
+	c=lcm(a, b);
+	printf("LCM of %d and %d is %d\n",a,b,c);
+} 
